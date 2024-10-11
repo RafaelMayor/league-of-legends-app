@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5c08c9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    max-width: 400px;
+    height: auto;
+    display: inline-block;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 450px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card h2, .card p {
+    margin: 0;
+}
+
+.blurb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: none;
+    z-index: 3;
+}
+
+.card:hover .blurb {
+    display: block;
+}
+
+.read-more {
+    color: #61dafb;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: block;
+}
+
+.stats {
+    margin-top: 20px;
+}
+
+.stats h3 {
+    margin-bottom: 10px;
+}
+
+.stats p {
+    margin: 5px 0;
+}
+
+.tags {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.blurb.expanded {
+    overflow: auto;
+}
+
+#credits {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 4;
+}
