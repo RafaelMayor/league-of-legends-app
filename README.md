@@ -1,1 +1,1 @@
-# league-of-legends-app
+<https://rafaelmayor.github.io/league-of-legends-app/>
